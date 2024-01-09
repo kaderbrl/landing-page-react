@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Volkhov:wght@400;700&display=swap");
+
+:root {
+  --orange: #df6951;
+  --light-orange: #ff946d;
+  --dark-orange: #ff7d68;
+  --yellow: #f1a501;
+  --blue: #59b2e6;
+  --navy-blue: #181e4b;
+  --purple: #747def;
+  --dark-purple: #5e3be1;
+  --gray: #5e6282;
+  --dark-gray: #84829a;
+  --light: #f0efef;
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #212832;
+  --shadow: 0 10px 8px -2px rgba(0, 0, 0, 0.1);
+  --hover:  scale(1.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+
+  /* Scrollbar */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      var(--light-orange),
+      var(--dark-orange)
+    );
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      var(--dark-orange),
+      var(--light-orange)
+    );
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* Fonts */
+.font-volkhov {
+  font-family: "Volkhov", serif;
+}
+
+.font-poppins,
+.font-open-sans {
+  font-family: "Poppins", "Open Sans", sans-serif;
+}
+
+/* Section */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & h3 {
+    font-size: 1.125rem;
+    color: var(--gray);
+  }
+
+  & h4 {
+    font-size: 3.125rem;
+  }
+}
+
+/* Responsive - Media Queries 
+***************************************************************************************************/
+@media (max-width: 998px) {
+  section {
+    padding-top: 120px;
+    height: auto;
+
+    & h4 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    section {
+      & h3 {
+        font-size: 0.938rem;
+      }
+
+      & h4 {
+        font-size: 1.875rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+#testimonials {
+  height: auto;
+  padding: 120px 0;
+
+  h3 {
+    color: var(--dark);
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+  }
+
+  .carousel {
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 2;
+
+    .carousel-inner {
+      min-height: 230px;
+
+      .carousel-item {
+        transition: opacity 1s ease-in-out;
+
+        .carousel-caption {
+          color: var(--gray);
+          top: 3rem;
+          left: 80px;
+
+          & span {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    /* Carousel Dotted Indicators */
+    .carousel-indicators {
+      position: absolute;
+      left: -47rem;
+      right: auto;
+
+      & button {
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin: 0 8px;
+        filter: invert(0.8);
+      }
+    }
+
+    /* Carousel Arrow Indicators */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 35px;
+      height: 35px;
+      right: 0;
+      left: auto;
+      margin-right: -3em;
+      top: 35%;
+      transform: translateY(-35%);
+
+      > span {
+        width: 1.3rem;
+      }
+    }
+
+    .carousel-control-prev {
+      transform: rotate(90deg);
+    }
+
+    .carousel-control-next {
+      margin-top: 50px;
+      transform: rotate(90deg);
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      filter: invert(1);
+    }
+  }
+
+  .bottom-div {
+    width: calc(100% - 100px);
+    height: 230px;
+    content: "";
+    right: 15px;
+    position: absolute;
+    border-radius: 20px;
+    top: 60px;
+    border: 1px solid var(--light);
+    box-shadow: var(--shadow);
+  }
+}
+
+/* Responsive - Media Queries 
+***************************************************************************************************/
+@media (max-width: 1300px) {
+  #testimonials {
+    .carousel {
+      .carousel-indicators {
+        left: -41em;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    #testimonials {
+      .carousel {
+        .carousel-indicators {
+          left: -34em;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      #testimonials {
+        padding-bottom: 100px;
+
+        .carousel {
+          margin-top: 50px;
+
+          .carousel-indicators {
+            left: 0;
+            right: 0;
+            bottom: -5em;
+          }
+        }
+      }
+
+      @media (max-width: 578px) {
+        #testimonials {
+          .carousel {
+            .carousel-caption {
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

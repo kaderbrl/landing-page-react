@@ -1,0 +1,128 @@
+#subscribe {
+  .container {
+    background-color: rgba(223, 215, 249, 0.3);
+    background-image: url("/public/images/rounded-spiral-right.svg"),
+      url("/public/images/rounded-spiral-left.svg");
+    background-repeat: no-repeat no-repeat;
+    background-position: top -50px right -80px, bottom -120px left 30px;
+    border-radius: 100px 20px 20px 20px;
+    padding: 100px 0;
+
+    /* Top-Right Submit Icon */
+    .top-submit-icon {
+      background-image: linear-gradient(
+        to bottom,
+        var(--purple),
+        var(--dark-purple)
+      );
+      width: 56px;
+      height: 56px;
+    }
+
+    & h3 {
+      font-size: 33px;
+      color: var(--gray);
+    }
+
+    /* Form Input */
+    & form {
+      margin-top: 80px;
+
+      .input-group {
+        .input-group-text {
+          border-radius: 10px 0 0 10px;
+        }
+      }
+
+      & input {
+        height: 60px;
+        border-radius: 0 10px 10px 0;
+        caret-color: var(--orange);
+
+        &:focus {
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+    }
+
+    /* Subscribe Button */
+    & button {
+      height: 60px;
+      background-image: linear-gradient(
+        to bottom,
+        var(--light-orange),
+        var(--dark-orange)
+      );
+      border: none;
+      border-radius: 10px;
+
+      &:hover {
+        background-image: linear-gradient(
+          to bottom,
+          var(--light-orange),
+          var(--dark-orange)
+        );
+      }
+    }
+  }
+}
+
+/* Responsive - Media Queries 
+***************************************************************************************************/
+@media (max-width: 992px) {
+  #subscribe {
+    height: auto;
+
+    .container {
+      padding: 60px 0;
+
+      & h3 {
+        font-size: 1.625rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #subscribe {
+      .container {
+        background-position: top -140px right -180px, bottom -300px left -100px;
+        padding: 60px 30px;
+        border-radius: 50px 10px 10px 10px;
+        margin-bottom: 50px;
+
+        .top-submit-icon {
+          width: 50px;
+          height: 50px;
+        }
+
+        & h3 {
+          font-size: 20px;
+        }
+
+        & form {
+          margin-top: 40px;
+
+          & input,
+          button {
+            height: 45px;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 578px) {
+      #subscribe {
+        .container {
+          padding: 50px 20px;
+          margin: 0 25px 50px 25px;
+
+          & h3 {
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+}

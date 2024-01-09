@@ -1,0 +1,77 @@
+#destinations {
+  .card {
+    min-width: 300px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      .card-body {
+        .card-title {
+          span:first-child {
+            color: var(--orange);
+          }
+        }
+      }
+    }
+
+    .card-img {
+      height: 350px;
+      border-radius: 1rem 1rem 0 0;
+
+      img {
+        height: 100%;
+        object-position: right top;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .card-body {
+      .card-title {
+        font-size: 1rem;
+        color: var(--gray);
+      }
+
+      .card-text {
+        font-size: 0.875rem;
+        color: var(--gray);
+      }
+    }
+
+    &.last-card {
+      &:after {
+        content: "";
+        position: absolute;
+        right: -60px;
+        bottom: 40px;
+        width: 98px;
+        height: 254px;
+        background-image: url("/public/images/spiral.svg");
+        background-size: cover;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+/* Responsive - Media Queries 
+***************************************************************************************************/
+@media (max-width: 768px) {
+  #destinations {
+    .card {
+      min-width: 250px;
+
+      &.last-card {
+        &:after {
+          background-image: none;
+        }
+      }
+    }
+  }
+}

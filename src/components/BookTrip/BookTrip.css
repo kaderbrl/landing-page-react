@@ -1,0 +1,151 @@
+#book-a-trip {
+  h3 {
+    color: var(--dark);
+    font-size: 1.125rem;
+  }
+
+  h4 {
+    font-size: 2.188rem;
+  }
+
+  /* List Items */
+  .list-group {
+    .list-group-item {
+      & .icon-box {
+        width: 48px;
+        height: 48px;
+      }
+
+      & h5,
+      p {
+        font-size: 1rem;
+        color: var(--gray);
+      }
+    }
+  }
+
+  /* Card */
+  .card {
+    width: 355px;
+    box-shadow: 109px -101px 144px -105px rgba(89, 178, 230, 0.8),
+      0 10px 8px -2px rgba(0, 0, 0, 0.1);
+
+    .card-body {
+      .card-title {
+        font-size: 1.125rem;
+      }
+
+      .card-text {
+        color: var(--dark-gray);
+        font-size: 0.938rem;
+      }
+
+      .icons {
+        > div {
+          width: 36px;
+          height: 36px;
+          background-color: var(--light);
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: var(--shadow);
+            transition: all 0.5s;
+            transform: var(--hover);
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      color: var(--dark-gray);
+      font-size: 0.938rem;
+
+      .heart-icon {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Trip to - Popover */
+.popover {
+  width: 260px;
+
+  .popover-arrow {
+    display: none;
+  }
+
+  .popover-body {
+    & h5 {
+      font-size: 1.125rem;
+    }
+
+    & span {
+      color: var(--dark-gray);
+    }
+
+    & p {
+      > span {
+        color: var(--purple);
+      }
+    }
+
+    .progress {
+      height: 6px;
+      background-color: var(--light);
+
+      .progress-bar {
+        background-color: var(--purple);
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+/* Responsive - Media Queries 
+***************************************************************************************************/
+@media (max-width: 576px) {
+  #book-a-trip {
+    .list-group {
+      .list-group-item {
+        & .icon-box {
+          width: 35px;
+          height: 35px;
+        }
+
+        & h6,
+        p {
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+    .card {
+      > img {
+        height: 150px;
+      }
+
+      .card-body {
+        .card-title {
+          font-size: 1rem;
+        }
+
+        .card-text {
+          font-size: 0.875rem;
+        }
+      }
+
+      .card-footer {
+        font-size: 0.813rem;
+      }
+    }
+  }
+
+  .popover {
+    .popover-body {
+      & h5 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
