@@ -16,6 +16,10 @@
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="22" alt="figma logo"  /> Figma
 Check the Figma link here 👉 [Travel Website Landing Page](https://www.figma.com/community/file/993910904620677970)
 
+## 💻 Live Demo
+
+Check the live demo here 👉 [Demo](https://travel-landing-page-kaderbrl.vercel.app/) 
+
 ## 📋 Instructions
 
 First clone this repository.
