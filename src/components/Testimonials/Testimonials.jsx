@@ -3,30 +3,7 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 
 import './Testimonials.css';
-
-const testimonialsData = [
-  {
-    id: 1,
-    name: 'Mike Taylor',
-    text: 'On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.',
-    location: 'Lahore, Pakistan',
-    image: 'images/person1.jpg',
-  },
-  {
-    id: 2,
-    name: 'Chris Thomas',
-    text: 'On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.',
-    location: 'CEO of Red Button',
-    image: 'images/person2.jpg',
-  },
-  {
-    id: 3,
-    name: 'Isabella Rossi',
-    text: 'On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.',
-    location: 'Rome, Italy',
-    image: 'images/person3.jpg',
-  },
-];
+import { TESTIMONIALS } from '../../data';
 
 export const Testimonials = () => {
   return (
@@ -43,8 +20,8 @@ export const Testimonials = () => {
           </Col>
           <Col className='position-relative'>
             <Carousel fade className='w-100'>
-              {testimonialsData &&
-                testimonialsData.map((testimonial) => (
+              {TESTIMONIALS &&
+                TESTIMONIALS.map((testimonial) => (
                   <Carousel.Item key={testimonial.id} className='h-100'>
                     <Image
                       roundedCircle

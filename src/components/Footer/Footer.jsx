@@ -1,80 +1,8 @@
-import {
-  Col,
-  Container,
-  Image,
-  ListGroup,
-  Row,
-  Stack,
-} from 'react-bootstrap';
+import { Col, Container, Image, ListGroup, Row, Stack } from "react-bootstrap";
 
-import { FacebookIcon, InstagramIcon, TwitterIcon } from '../icons';
-import './Footer.css';
-
-const footerData = [
-  {
-    id: 1,
-    name: 'Company',
-    children: [
-      {
-        id: 11,
-        name: 'About',
-        link: '#',
-      },
-      {
-        id: 12,
-        name: 'Careers',
-        link: '#',
-      },
-      {
-        id: 13,
-        name: 'Mobile',
-        link: '#',
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Contact',
-    children: [
-      {
-        id: 21,
-        name: 'Help/FAQ',
-        link: '#',
-      },
-      {
-        id: 22,
-        name: 'Press',
-        link: '#',
-      },
-      {
-        id: 23,
-        name: 'Affilates',
-        link: '#',
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: 'More',
-    children: [
-      {
-        id: 31,
-        name: 'Airlinefees',
-        link: '#',
-      },
-      {
-        id: 32,
-        name: 'Airline',
-        link: '#',
-      },
-      {
-        id: 33,
-        name: 'Low fare tips',
-        link: '#',
-      },
-    ],
-  },
-];
+import { FacebookIcon, InstagramIcon, TwitterIcon } from "../icons";
+import "./Footer.css";
+import { FOOTER } from "../../data";
 
 export const Footer = () => {
   return (
@@ -88,11 +16,13 @@ export const Footer = () => {
             </small>
           </Col>
 
-          {footerData &&
-            footerData.map((item) => (
+          {FOOTER &&
+            FOOTER.map((item) => (
               <Col key={item.id}>
                 {/* Footer List Titles */}
-                <strong className='footer-title text-dark mb-0 mb-sm-3'>{item.name}</strong>
+                <strong className='footer-title text-dark mb-0 mb-sm-3'>
+                  {item.name}
+                </strong>
                 <ListGroup variant='flush'>
                   {/* Footer List Items */}
                   {item.children.map((child) => (
@@ -145,4 +75,4 @@ export const Footer = () => {
       </Container>
     </footer>
   );
-}
+};

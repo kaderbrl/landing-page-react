@@ -8,46 +8,17 @@ import {
   Popover,
   ProgressBar,
   Row,
-} from 'react-bootstrap';
+} from "react-bootstrap";
 
-import {
-  BuildingIcon,
-  HeartIcon,
-  LeafIcon,
-  MapIcon,
-  SelectionIcon,
-  SendIcon,
-  TaxiIcon,
-  WaterSportIcon,
-} from '../icons';
-import './BookTrip.css';
-
-const bookTripData = [
-  {
-    id: 1,
-    title: 'Choose Destination',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.',
-    icon: <SelectionIcon />,
-    color: '#F0BB1F',
-  },
-  {
-    id: 2,
-    title: 'Make Payment',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.',
-    icon: <WaterSportIcon />,
-    color: '#F15A2B',
-  },
-  {
-    id: 3,
-    title: 'Reach Airport on Selected Date',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ',
-    icon: <TaxiIcon />,
-    color: '#006380',
-  },
-];
+import { 
+  BuildingIcon, 
+  HeartIcon, 
+  LeafIcon, 
+  MapIcon, 
+  SendIcon 
+} from "../icons";
+import "./BookTrip.css";
+import { BOOK_TRIP } from "../../data";
 
 export const BookTrip = () => {
   // Trip to - Popover
@@ -90,8 +61,8 @@ export const BookTrip = () => {
             </h4>
             <ListGroup variant='flush' className='mt-4'>
               {/* List Items */}
-              {bookTripData &&
-                bookTripData.map((trip) => (
+              {BOOK_TRIP &&
+                BOOK_TRIP.map((trip) => (
                   <ListGroup.Item
                     key={trip.id}
                     className='d-flex justify-content-start gap-4 border-bottom-0 font-poppins'
@@ -117,7 +88,11 @@ export const BookTrip = () => {
             </ListGroup>
           </Col>
           {/* Right Column */}
-          <Col lg={5} xl={6} className='d-flex justify-content-center align-items-center'>
+          <Col
+            lg={5}
+            xl={6}
+            className='d-flex justify-content-center align-items-center'
+          >
             <Card className='rounded-4 font-poppins py-3 px-4 border-0'>
               <Card.Img
                 src={`${process.env.PUBLIC_URL}/images/greece.png`}
@@ -151,7 +126,7 @@ export const BookTrip = () => {
                   </div>
                   {/* Trip to - Popover */}
                   <OverlayTrigger
-                    trigger={['hover', 'focus']}
+                    trigger={["hover", "focus"]}
                     placement='top'
                     overlay={popover}
                   >
@@ -165,4 +140,4 @@ export const BookTrip = () => {
       </Container>
     </section>
   );
-}
+};

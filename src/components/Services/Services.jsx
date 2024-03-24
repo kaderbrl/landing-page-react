@@ -1,41 +1,7 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 
-import {
-  MicrophoneIcon,
-  PlaneIcon,
-  SatelitteIcon,
-  SettingsIcon,
-} from "../icons";
 import "./Services.css";
-
-const servicesData = [
-  {
-    id: 1,
-    title: "Calculated Weather ",
-    description: "Built Wicket longer admire do barton vanity itself do in it.",
-    icon: <SatelitteIcon />,
-  },
-  {
-    id: 2,
-    title: "Best Flights",
-    description: "Engrossed listening. Park gate sell they west hard for the.",
-    icon: <PlaneIcon />,
-  },
-  {
-    id: 3,
-    title: "Local Events",
-    description:
-      "Barton vanity itself do in it. Preferd to men it engrossed listening. ",
-    icon: <MicrophoneIcon />,
-  },
-  {
-    id: 4,
-    title: "Customization",
-    description:
-      "We deliver outsource aviation services for military customers",
-    icon: <SettingsIcon />,
-  },
-];
+import { SERVICES } from "../../data";
 
 export const Services = () => {
   return (
@@ -50,8 +16,8 @@ export const Services = () => {
 
       <Container className='my-sm-5 my-0'>
         <Row md={2} lg={4} className='gx-sm-5 gx-2'>
-          {servicesData &&
-            servicesData.map((service) => (
+          {SERVICES &&
+            SERVICES.map((service) => (
               <Col key={service.id}>
                 <Card className='rounded-5 border-0 py-4'>
                   <div className='services-icon d-flex justify-content-center'>

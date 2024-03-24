@@ -2,30 +2,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 
 import { NavigationIcon } from '../icons';
 import './Destinations.css';
-
-const destinationsData = [
-  {
-    id: 1,
-    name: 'Rome, Italy',
-    price: '$5,42k',
-    description: '10 Days Trip',
-    image: 'images/italy.png',
-  },
-  {
-    id: 2,
-    name: 'London, UK',
-    price: '$4,2k',
-    description: '12 Days Trip',
-    image: 'images/london.png',
-  },
-  {
-    id: 3,
-    name: 'Full Europe',
-    price: '$15k',
-    description: '28 Days Trip',
-    image: 'images/europe.png',
-  },
-];
+import { DESTINATIONS } from '../../data';
 
 export const Destinations = () => {
   return (
@@ -37,12 +14,12 @@ export const Destinations = () => {
       <h4 className='font-volkhov fw-bold'>Top Destinations</h4>
       <Container className='my-sm-5 my-0'>
         <Row xs={1} sm={2} lg={3} className='d-flex justify-content-center'>
-          {destinationsData &&
-            destinationsData.map((destination, index) => (
+          {DESTINATIONS &&
+            DESTINATIONS.map((destination, index) => (
               <Col key={destination.id} className='g-5 d-flex justify-content-center'>
                 <Card
                   className={`rounded-4 border-0 ${
-                    index === destinationsData.length - 1 ? 'last-card' : ''
+                    index === DESTINATIONS.length - 1 ? 'last-card' : ''
                   }`}
                 >
                   <div className='card-img overflow-hidden'>

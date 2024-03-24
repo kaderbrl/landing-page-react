@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import {
   Button,
   Container,
@@ -6,33 +6,11 @@ import {
   Nav,
   NavDropdown,
   Navbar,
-} from 'react-bootstrap';
+} from "react-bootstrap";
 
-import { ArrowUpIcon } from '../icons';
-import './Menu.css';
-
-const menuData = [
-  {
-    id: 1,
-    name: "Destinations",
-    link: "#destinations",
-  },
-  {
-    id: 2,
-    name: "Hotels",
-    link: "#",
-  },
-  {
-    id: 3,
-    name: "Flights",
-    link: "#",
-  },
-  {
-    id: 4,
-    name: "Bookings",
-    link: "#",
-  },
-];
+import { ArrowUpIcon } from "../icons";
+import "./Menu.css";
+import { MENU } from "../../data";
 
 export const Menu = () => {
   // #region Scroll To Top
@@ -50,12 +28,7 @@ export const Menu = () => {
     };
   }, []);
 
-  const handleScrollToTopButton = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const handleScrollToTopButton = () => window.scrollTo({ top: 0 });
   // #endregion Scroll To Top
 
   return (
@@ -65,7 +38,7 @@ export const Menu = () => {
         collapseOnSelect
         expand='lg'
         className={`${
-          scrolling ? 'bg-white shadow-sm' : 'bg-transparent'
+          scrolling ? "bg-white shadow-sm" : "bg-transparent"
         } pb-4`}
       >
         <Container>
@@ -88,19 +61,30 @@ export const Menu = () => {
           >
             <Nav className='gap-xl-5 gap-lg-4 gap-md-2'>
               {/* Navbar Elements */}
-              {menuData &&
-                menuData.map((menu, index) => (
-                  <Nav.Link href={menu.link} key={index} className='text-black fw-medium'>
+              {MENU &&
+                MENU.map((menu, index) => (
+                  <Nav.Link
+                    href={menu.link}
+                    key={index}
+                    className='text-black fw-medium'
+                  >
                     {menu.name}
                   </Nav.Link>
                 ))}
               {/* Login and Sign up Buttons */}
-              <Button variant='light' className='bg-transparent border-0 fw-medium'>
+              <Button
+                variant='light'
+                className='bg-transparent border-0 fw-medium'
+              >
                 Login
               </Button>
               <Button variant='outline-dark fw-medium'>Sign up</Button>
               {/* Languages - Dropdown */}
-              <NavDropdown title='EN' id='basic-nav-dropdown' className='fw-medium'>
+              <NavDropdown
+                title='EN'
+                id='basic-nav-dropdown'
+                className='fw-medium'
+              >
                 <NavDropdown.Item href='#'>EN - (English)</NavDropdown.Item>
                 <NavDropdown.Item href='#'>TR - (Turkish)</NavDropdown.Item>
                 <NavDropdown.Item href='#'>ES - (Spanish)</NavDropdown.Item>
@@ -122,4 +106,4 @@ export const Menu = () => {
       )}
     </>
   );
-}
+};
