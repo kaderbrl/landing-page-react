@@ -25,7 +25,7 @@ Check the live demo here 👉 [Demo](https://travel-landing-page-kaderbrl.vercel
 First clone this repository.
 
 ```shell
-https://github.com/kaderbrl/landing-page-react.git
+git clone https://github.com/kaderbrl/landing-page-react.git
 ```
 
 Install dependencies. Make sure you already have [`node.js`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
